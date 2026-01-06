@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAVID WENG PAM | Product & Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #030712;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .bento-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+</head>
+
+<body class="text-slate-200 antialiased">
+
+    <nav class="sticky top-0 z-[100] px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3 shadow-2xl border-white/5">
+            <h1 class="text-lg font-extrabold tracking-tighter uppercase bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
+                David Pam<span class="text-slate-500 text-sm ml-1 font-light">/CS</span>
+            </h1>
+
+            <div class="flex items-center space-x-8 text-sm font-semibold">
+                <a href="#projects" class="hidden md:block text-slate-400 hover:text-white transition">Work</a>
+                <a href="#skills" class="hidden md:block text-slate-400 hover:text-white transition">Skills</a>
+
+                <div class="relative group">
+                    <button class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-xl transition-all flex items-center gap-2 shadow-lg shadow-blue-900/40">
+                        <span>Contact</span>
+                        <i class="fas fa-chevron-down text-[10px] opacity-50 group-hover:rotate-180 transition-transform"></i>
+                    </button>
+
+                    <div class="absolute right-0 mt-4 w-72 glass rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden text-left">
+                        <div class="p-4 border-b border-white/5 bg-white/5 text-left">
+                            <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Direct Line</p>
+                            <p class="text-white font-mono">+234 913 013 9467</p>
+                        </div>
+                        <div class="py-2">
+                            <a href="mailto:dpam.2303564@stu.cu.edu.ng" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition text-left">
+                                <i class="fas fa-envelope text-blue-400 w-5 text-center"></i>
+                                <span>Email Me</span>
+                            </a>
+                            <button onclick="copyEmail()" class="w-full flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition text-left">
+                                <i class="fas fa-copy text-slate-400 w-5 text-center"></i>
+                                <span id="copy-text">Copy Email</span>
+                            </button>
+                        </div>
+                        <div class="p-3 bg-blue-500/10 border-t border-white/5">
+                            <a href="PAM_DAVID_CV.pdf" target="_blank" class="flex items-center justify-center gap-2 w-full py-2.5 bg-blue-600 rounded-lg text-xs font-bold hover:bg-blue-500 transition">
+                                <i class="fas fa-file-pdf"></i>
+                                Open Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-16 px-6 text-center max-w-5xl mx-auto">
+        <h2 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-[1.1] text-white">
+            Designing <br />
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400">
+                Complex Ecosystems.
+            </span>
+        </h2>
+        <p class="text-slate-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+            Computer Science student at Covenant University specializing in <span class="text-white font-semibold">AI Systems</span>, <span class="text-white font-semibold">NoSQL Architecture</span>, and <span class="text-white font-semibold">Product Design</span>.
+        </p>
+
+        <div class="flex justify-center gap-6">
+            <a href="https://linkedin.com/in/davidpam" target="_blank" class="w-12 h-12 glass rounded-xl flex items-center justify-center hover:text-blue-400 transition transform hover:-translate-y-1">
+                <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="https://github.com/dpam17" target="_blank" class="w-12 h-12 glass rounded-xl flex items-center justify-center hover:text-white transition transform hover:-translate-y-1">
+                <i class="fab fa-github text-xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="projects" class="py-20 max-w-6xl mx-auto px-6 text-left">
+        <h3 class="text-3xl font-bold mb-10 text-white tracking-tight">Technical Work</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass p-8 rounded-3xl bento-card flex flex-col justify-between h-full text-left">
+                <div>
+                    <span class="text-blue-400 text-[10px] font-bold uppercase tracking-widest">Logic & NLP</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4 text-white">LLM Q&A System</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Optimizing query response relevance using Python-based tokenization and semantic search for high-speed information retrieval.</p>
+                </div>
+                <a href="https://github.com/dpam17/LLM_QA_Project_PAMWENG_23CG034152" target="_blank" class="w-fit px-5 py-2 bg-white text-black text-xs font-bold rounded-xl hover:bg-blue-400 transition">View Source</a>
+            </div>
+
+            <div class="glass p-8 rounded-3xl bento-card flex flex-col justify-between h-full border-emerald-500/10 text-left">
+                <div>
+                    <span class="text-emerald-400 text-[10px] font-bold uppercase tracking-widest">Product Design</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4 text-white">FinBridge</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">High-fidelity UI/UX design for a student-focused P2P loaning platform, mapping complex financial flows into an intuitive user interface.</p>
+                </div>
+                <a href="https://www.figma.com/design/D6KqGTqy10wwYMK9IdVWVS/FinBridge?node-id=0-1&p=f&t=Wx8l3hPE6p6Jghzs-0" target="_blank" class="w-fit px-5 py-2 bg-emerald-600 text-white text-xs font-bold rounded-xl hover:bg-emerald-500 transition flex items-center gap-2">
+                    <i class="fab fa-figma"></i> View Figma
+                </a>
+            </div>
+
+            <div class="glass p-8 rounded-3xl bento-card flex flex-col justify-between h-full border-amber-500/10 text-left">
+                <div>
+                    <span class="text-amber-400 text-[10px] font-bold uppercase tracking-widest">Data Architecture</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4 text-white">NoSQL Database</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Designed a scalable MongoDB schema utilizing PyMongo for high-performance storage and rapid retrieval of unstructured data sets.</p>
+                </div>
+                <a href="https://github.com/dpam17" target="_blank" class="w-fit px-5 py-2 border border-white/20 text-white text-xs font-bold rounded-xl hover:bg-white/10 transition">View Code</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 max-w-6xl mx-auto px-6 text-left scroll-mt-32">
+        <div class="flex items-center gap-4 mb-12">
+            <h2 class="text-3xl font-bold tracking-tight text-white">Technical <span class="text-blue-400">Stack</span></h2>
+            <div class="h-[1px] bg-white/10 flex-grow"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 text-left">
+            <div class="glass p-8 rounded-3xl border-white/5 hover:border-blue-500/30 transition-all duration-500 group">
+                <h3 class="text-lg font-bold mb-8 text-white flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+                    Backend & Databases
+                </h3>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-blue-600/10 rounded-xl flex items-center justify-center border border-blue-500/20 group-hover/item:bg-blue-600/20 transition-colors">
+                            <i class="fab fa-python text-blue-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">Python & PyMongo</span>
+                    </div>
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-emerald-600/10 rounded-xl flex items-center justify-center border border-emerald-500/20 group-hover/item:bg-emerald-600/20 transition-colors">
+                            <i class="fas fa-leaf text-emerald-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">MongoDB</span>
+                    </div>
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-slate-600/10 rounded-xl flex items-center justify-center border border-white/10 group-hover/item:bg-white/10 transition-colors">
+                            <i class="fas fa-table text-slate-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">SQL Databases</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-3xl border-white/5 hover:border-purple-500/30 transition-all duration-500 group text-left">
+                <h3 class="text-lg font-bold mb-8 text-white flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+                    AI & Computer Vision
+                </h3>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-purple-600/10 rounded-xl flex items-center justify-center border border-purple-500/20 group-hover/item:bg-purple-600/20 transition-colors">
+                            <i class="fas fa-camera text-purple-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">OpenCV</span>
+                    </div>
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-pink-600/10 rounded-xl flex items-center justify-center border border-pink-500/20 group-hover/item:bg-pink-600/20 transition-colors">
+                            <i class="fas fa-face-smile text-pink-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">DeepFace</span>
+                    </div>
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-yellow-600/10 rounded-xl flex items-center justify-center border border-yellow-500/20 group-hover/item:bg-yellow-600/20 transition-colors">
+                            <i class="fas fa-bolt text-yellow-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">Real-time Processing</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass p-8 rounded-3xl border-white/5 hover:border-orange-500/30 transition-all duration-500 group text-left">
+                <h3 class="text-lg font-bold mb-8 text-white flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
+                    Design & Development
+                </h3>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-indigo-600/10 rounded-xl flex items-center justify-center border border-indigo-500/20 group-hover/item:bg-indigo-600/20 transition-colors">
+                            <i class="fab fa-figma text-indigo-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">Figma</span>
+                    </div>
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-orange-600/10 rounded-xl flex items-center justify-center border border-orange-500/20 group-hover/item:bg-orange-600/20 transition-colors">
+                            <i class="fas fa-code-branch text-orange-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">Git & GitHub</span>
+                    </div>
+                    <div class="flex items-center gap-4 group/item">
+                        <div class="w-10 h-10 bg-cyan-600/10 rounded-xl flex items-center justify-center border border-cyan-500/20 group-hover/item:bg-cyan-600/20 transition-colors">
+                            <i class="fas fa-wind text-cyan-400 text-lg"></i>
+                        </div>
+                        <span class="text-slate-300 font-medium group-hover/item:text-white transition-colors">Tailwind CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-white/5 mt-10">
+        <p class="text-slate-600 text-[10px] tracking-[0.4em] uppercase">© 2025 David Weng Pam | Covenant University</p>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            const email = "dpam.2303564@stu.cu.edu.ng";
+            navigator.clipboard.writeText(email).then(() => {
+                const text = document.getElementById('copy-text');
+                text.innerText = "Copied Address!";
+                text.classList.add('text-emerald-400');
+                setTimeout(() => {
+                    text.innerText = "Copy Email";
+                    text.classList.remove('text-emerald-400');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+
+</html>
